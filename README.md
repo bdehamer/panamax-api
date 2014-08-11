@@ -4,6 +4,14 @@
 
 The API behind [The Panamax UI](https://github.com/CenturyLinkLabs/panamax-ui).
 
+The Panamax API interacts with a number of additional APIs to launch and gather information about applications:
+
+* [Docker Remote API](https://docs.docker.com/reference/api/docker_remote_api_v1.12/) - Get status information for running containers and search for images.
+* [Docker Registry API](https://docs.docker.com/reference/api/registry_api/) - Retrieve tags for images in the Docker Registry.
+* [etcd API](https://coreos.com/docs/distributed-configuration/etcd-api/) - Send data to the CoreOS Fleet daemon.
+* [systemd-journal-gatewayd.services](http://www.freedesktop.org/software/systemd/man/systemd-journal-gatewayd.service.html) - Retrieve journal output for running services.
+* 
+
 ## Getting Started
 
 If you're trying to install panamax as a complete package: [Follow these instructions](http://panamax.io/get-panamax).
@@ -11,6 +19,7 @@ If you're trying to install panamax as a complete package: [Follow these instruc
 If you are a potential contributor or would like to install the API only, read on.
 
 ### Pre-requisites
+The Panamax API interacts with a number of additional APIs to launch and gather information about applications
 * Install a Vagrant provider (VirtualBox or VMWare etc.)
 * Install Vagrant
 
